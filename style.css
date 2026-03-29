@@ -504,3 +504,59 @@ img {
     background-color: #00b386;
     transform: translateY(-2px);
 }
+/* 1. Base Styles: Things every button shares */
+.btn-modern, .whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Sizing - makes them all match */
+  padding: 12px 24px;
+  min-width: 180px;
+  margin: 8px;
+  
+  /* Typography */
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  
+  /* Aesthetics */
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Color Themes */
+
+/* The CV and Contact buttons */
+.btn-modern {
+  background-color: #10b981; /* Emerald Green */
+  color: white;
+}
+
+.btn-modern:hover {
+  background-color: #059669;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* The WhatsApp button */
+.whatsapp-btn {
+  background-color: #25D366; /* Official WhatsApp Green */
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Active state for all */
+.btn-modern:active, .whatsapp-btn:active {
+  transform: translateY(-1px);
+}
