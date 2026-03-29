@@ -560,3 +560,53 @@ img {
 .btn-modern:active, .whatsapp-btn:active {
   transform: translateY(-1px);
 }
+
+/* --- RESPONSIVE FIXES --- */
+
+/* 1. Container for your buttons */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;       /* Allows buttons to move to next line */
+    gap: 12px;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* 2. Standardize button behavior */
+.btn-modern, .contact-btn, .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+/* 3. MOBILE SPECIFIC (Screen size smaller than 768px) */
+@media screen and (max-width: 768px) {
+    /* Make the Hero Text smaller so it doesn't break */
+    h1 {
+        font-size: 2rem !important; 
+        line-height: 1.2;
+    }
+
+    /* Stack buttons vertically on small phones */
+    .button-container {
+        flex-direction: column;
+        align-items: stretch; /* Makes all buttons the same width */
+    }
+
+    .btn-modern, .contact-btn, .whatsapp-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Ensure images/sections don't overflow */
+    .about-me-img, .contact__content {
+        width: 100% !important;
+        padding: 10px;
+    }
+}
